@@ -1,0 +1,271 @@
+/* ----------------------------------------------------------------------------------------
+* Author        : Qrolic
+* Template Name : Template
+* File          : Main CSS file
+* Version       : 1.0
+* ---------------------------------------------------------------------------------------- */
+/* INDEX
+----------------------------------------------------------------------------------------
+01. General css
+02. banner css
+-------------------------------------------------------------------------------------- */
+/************************************/
+/***** 	   01. General css		 ****/
+/************************************/
+body {
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover,
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+::-moz-selection {
+  background: #05cbfc;
+  color: #fff;
+}
+
+::selection {
+  background: #05cbfc;
+  color: #fff;
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+button:focus,
+input:focus,
+img:focus,
+.slick-slide:focus,
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/************************************/
+/***** 	   02. header css		 ****/
+/************************************/
+.header {
+  background-color: #f0f0f0;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .header__inner {
+    padding: 10px 15px;
+  }
+}
+
+.header__logo a > img {
+  width: 200px;
+}
+
+.header .toggle-menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  .header .toggle-menu {
+    display: block;
+  }
+}
+
+.header .toggle-menu i {
+  color: black;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 991px) {
+  .header__menu {
+    display: none;
+  }
+}
+
+.header__menu ul {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__menu ul li {
+  padding: 10px 15px;
+}
+
+.header__menu ul a {
+  color: #000000;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.header__menu ul a:hover {
+  color: #05cbfc;
+}
+
+.close-sidebar {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+}
+
+.close-sidebar.active {
+  display: block;
+}
+
+.sidebar.active {
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: #313131;
+  z-index: 999;
+  display: none;
+  -webkit-transform: translateX(-300px);
+  transform: translateX(-300px);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+@media screen and (max-width: 991px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+.sidebar__inner {
+  padding: 30px;
+}
+
+.sidebar__logo {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar__menu {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar__menu ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar__menu ul li a {
+  font-size: 15px;
+  color: white;
+  padding: 0px 0px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.sidebar__menu ul li a:hover {
+  color: #05cbfc;
+}
+
+/************************************/
+/***** 	   03. about css		 ****/
+/************************************/
+/*# sourceMappingURL=style.css.map */

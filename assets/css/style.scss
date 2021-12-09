@@ -1,0 +1,192 @@
+/* ----------------------------------------------------------------------------------------
+* Author        : Qrolic
+* Template Name : Template
+* File          : Main CSS file
+* Version       : 1.0
+* ---------------------------------------------------------------------------------------- */
+
+
+/* INDEX
+----------------------------------------------------------------------------------------
+01. General css
+02. banner css
+-------------------------------------------------------------------------------------- */
+@import '_variable';
+
+/************************************/
+/***** 	   01. General css		 ****/
+/************************************/
+body {
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    font-family: $primary-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a:hover,
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+::-moz-selection {
+    background: #05cbfc;
+    color: #fff;
+}
+
+::selection {
+    background: #05cbfc;
+    color: #fff;
+}
+*,::after,::before{
+    box-sizing: border-box;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+button:focus,
+input:focus,
+img:focus,
+.slick-slide:focus,
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+
+/************************************/
+/***** 	   02. header css		 ****/
+/************************************/
+
+.header{
+    background-color: #f0f0f0;
+    &__inner{
+        @include space-between;
+        @include align-items(center);
+        padding: 10px 20px;
+        @include max-991{
+            padding: 10px 15px;
+        }
+    }
+    &__logo{
+        &--img{
+            width: 200px;
+        }
+    }
+    .toggle-menu{
+        display: none;
+        cursor: pointer;
+        @include max-991{
+            display: block;
+        }
+        i{
+            color: black;
+            font-size: 18px;
+        }
+    }
+    &__menu{
+        @include max-991{
+            display: none;
+        }
+        ul{
+            @include center;
+            
+            li{
+                padding: 10px 15px;
+            }
+            a{
+                color: $black;
+                text-transform: capitalize;
+                font-size: 18px;
+                &:hover{
+                    color: #05cbfc;
+                }
+            }
+        }
+    }
+}
+
+.close-sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none; 
+}
+  
+.close-sidebar.active {
+    display: block; 
+}
+.sidebar.active {
+    @include transform (translateX(0px)); 
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: #313131;
+    z-index: 999;
+    display: none;
+    @include transform (translateX(-300px));
+    @include transition (all 500ms);
+    @include max-991{
+        display: block;
+    }
+    
+    &__inner{
+        padding: 30px;
+        
+    }
+    &__logo{
+        // width: 200px;
+        @include center;
+    }
+    &__menu{
+        padding: 20px 0;
+        @include center;
+        ul{
+            li{
+                margin-bottom: 10px;
+                a{
+                    font-size: 15px;
+                    color: $white;
+                    padding: 0px 0px;
+                    @include transition (all 500ms);
+                    &:hover{
+                        color: #05cbfc; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+/************************************/
+/***** 	   03. about css		 ****/
+/************************************/
