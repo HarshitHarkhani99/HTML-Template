@@ -1,10 +1,3 @@
-# HTML-Template
-New Version With Swiper and Bootstrap 5
-
-
-
-
-
 {%- assign item = section.settings -%}
 
 <style>
@@ -487,7 +480,23 @@ New Version With Swiper and Bootstrap 5
 						How to Download Wordpress Blank Theme:-
 						https://underscores.me/
 
+
+
+
+						How to include CSS and JS in Wordpress:-
+
+						In Function.php
+
+						// CSS
+						wp_enqueue_style( 'new-style-css', get_template_directory_uri() . '/assets/css/style.css', array());
+
+						// JS
+						wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/scripts.js', array(), _S_VERSION, true );
+
 						
+
+
+
 						Shortcode Print:-
 						<?php echo do_shortcode('[name_of_shortcode]'); ?>
 
